@@ -1,0 +1,31 @@
+<view class="page">
+
+  <view class="page__hd">
+      <text class="textStyle">checkbox</text>
+  </view>
+
+  <view class="page__bd">
+
+      <view class="section section_gap">
+
+          <!--<checkbox-group/>中选中项发生改变是触发 change 事件，detail = {value:[选中
+          的checkbox的value的数组]}-->
+          <checkbox-group bindchange="checkboxChange">
+              <label class="checkbox" wx:for="{{items}}">
+                  <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+              </label>
+          </checkbox-group>
+
+      </view>
+
+      <view class="section section_gap">
+            <!--单个checkbox-->
+            <label class="checkbox" bindtap="singleChange">
+                <checkbox value="singleCHVlaue" checked="{{singleChecked}}" />singleCheckbox
+            </label>
+      </view>
+
+  </view>
+
+
+</view>

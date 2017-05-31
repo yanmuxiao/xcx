@@ -1,0 +1,80 @@
+<!--pages/time/time.wxml-->
+
+<view class="month">
+    <image wx:if="{{prevMonth}}" src="/img/left.png" bindtap="prevMonth"></image>
+    <view><text class="{{num==0?'cur':''}}" bindtap="monthTap">2017年4月</text></view>
+    <image wx:if="{{nextMonth}}" src="/img/right.png" bindtap="nextMonth"></image>
+</view>
+
+<view class="week">
+    <block wx:for="{{week}}">
+        <view class="item">{{item}}</view>
+    </block>
+</view>
+<view class="day">
+    <block wx:for="{{month}}">
+        <view data-num="{{item.day}}" data-disabled="{{item.disabled}}" class="item {{item.disabled?'disabled':''}} {{num==item.day&&item.day!=''&&!item.disabled?'cur':''}} {{item.today?'today':''}} {{item.trip?'trip':''}}" bindtap="dayTap">{{item.day}}</view>
+    </block>
+</view>
+
+<view class="row-wrap">
+    <view class="row" bindtap="showMrak">
+        <view class="flex">活动时间： {{cur_value[0]}} : {{cur_value[1]}}</view>
+        <image class="set" src="/img/set.png"></image>
+    </view>
+    <view class="row" bindtap="goRemind">
+        <view class="flex">提醒时间： {{remind}}</view>
+        <image class="jt" src="/img/right.png"></image>
+    </view>
+</view>
+
+<view class="u-tt">行程</view>
+
+<view class="activity" style="background-image:url({{url}}/img/bg4.png)" bindtap="goDetails">
+    <view class="theme">1212</view>
+    <view style="text-align:right;">
+        <view class="time">04月05日 11:20</view>
+        <view>
+            <image src="/img/tx.jpg"></image>
+            <image src="/img/tx.jpg"></image>
+            <image src="/img/tx.jpg"></image>
+        </view>
+    </view>
+</view>
+
+<!--设置时间层-->
+<view class="mark" wx:if="{{mark}}">
+    <view class="top">
+        <view class="cont">
+            <view class="tips">
+                <view>小时</view>
+                <view>分钟</view>
+            </view>
+            <view class="u-time">
+<picker-view value="{{cur_value}}" bindchange="bindChange">
+    <picker-view-column>
+        <view wx:for="{{hour}}" data-tp="hour" class="num {{tp=='hour'?'cur':''}}" bindtap="timeTap">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+        <view wx:for="{{minute}}" data-tp="minute" class="num {{tp=='minute'?'cur':''}}" bindtap="timeTap">{{item}}</view>
+    </picker-view-column>
+</picker-view>
+            </view>
+            <view class="u-but">
+                <view bindtap="hideMark">取消</view>
+                <view bindtap="sureMark">确定</view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom">
+        <view wx:for="{{keyboard}}" hover-class="taps" data-num="{{item}}" bindtap="keyTap">{{item}}</view>
+    </view>
+    <view class="prev"  bindtap="prevTap">
+        <image wx:if="{{tp!='hour'}}" src="/img/prev1.png"></image>
+        <image wx:if="{{tp=='hour'}}" src="/img/prev2.png"></image>
+    </view>
+    <view class="next" bindtap="nextTap">
+        <image wx:if="{{tp=='hour'}}" src="/img/next1.png"></image>
+        <image wx:if="{{tp!='hour'}}" src="/img/next2.png"></image>
+    </view>
+</view>

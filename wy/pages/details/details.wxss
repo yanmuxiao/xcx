@@ -1,0 +1,67 @@
+/* pages/details/details.wxss */
+
+page{background: url(http://s-113712.gotocdn.com:99/img/page_bg.png) no-repeat #e5f4fb;background-size: 100% auto;}
+
+
+.item{height: 100%;padding: 40rpx 40rpx 0;box-sizing: border-box;display: flex;flex-direction: column;}
+.item .main{background:#fff;border-radius: 20px 20px 0 0;padding: 30rpx;box-sizing: border-box;padding-bottom: 55px;flex: 1;}
+.item .main .theme{position: relative;text-align: center;font-size: 16px;margin-bottom: 10px;}
+.item .main .theme image{position: absolute;width: 50px;height: 50px;border-radius: 100%;left:0;top:0;z-index: 9;}
+.item .main .theme .name{position: absolute;left: 55px;top:30px;font-size: 12px;z-index: 9;}
+.item .main .bg{position: relative;}
+.item .main .bg image{width: 610rpx;height: 305rpx;}
+.item .main .bg .label-wrap .label{position: absolute;top:50px;right: 50px;background: url() no-repeat;background-size:100% 100%;padding:5px 15px 5px 5px;color: #fff;font-size: 12px;}
+.item .main .bg .label-wrap .label:nth-of-type(1){top:20px;right: 20px;}
+.item .main .bg .label-wrap .label:nth-of-type(2){top:50px;right: 170px;}
+.item .main .bg .label-wrap .label:nth-of-type(3){top:80px;right: 150px;}
+.item .main .bg .label-wrap .label:nth-of-type(4){top:50px;right: 20px;}
+.item .main .bg .label-wrap .label:nth-of-type(5){top:60px;right: 200px;}
+.item .main .bg .label-wrap .label:nth-of-type(6){top:90px;right: 100px;}
+.item .main .bg .label-wrap .label:nth-of-type(7){top:30px;right: 88px;}
+.item .main .bg .label-wrap .label:nth-of-type(8){top:60px;right: 111px;}
+.item .main .bg .label-wrap .label:nth-of-type(9){top:40px;right: 120px;}
+.item .main .cont{line-height: 20px;color: #666;margin: 8px 0;}
+.item .main .cont.ellipsis{display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;text-overflow:ellipsis;overflow: hidden;}
+.item .main .row{line-height: 45px;border-bottom: 1px solid #ddd;display: flex;align-items: center;}
+.item .main .row>.icon{width: 20px;height: 20px;margin:0 8px;}
+.item .main .row>view{flex:1;}
+.item .main .row .tx{width: 26px;height: 26px;border-radius: 100%;margin-right: 5px;}
+.item .main .row .jt{width: 12px;height: 12px;}
+
+.foot{background: #fff;height: 55px;line-height: 55px;left: 20px;right: 20px;border-top: 1px solid #ddd;display: flex;}
+.foot button{flex:1;text-align:center;font-size: 16px;position: relative;line-height: 55px;border-radius: 0;background: transparent;border:0;}
+.foot button image{width: 22px;height: 22px;vertical-align: middle;margin:-4px 5px 0 0;}
+.foot .join:after{content:"";position: absolute;height: 50px;top:15px;left:auto;right: 0;width: 1px;background: #ddd;}
+.foot .disabled{opacity: .5;}
+
+.mark{position: fixed;left: 0;right: 0;top:0;bottom:0;background:rgba(0,0,0,.6);z-index: 9;}
+.mark .cont{position: absolute;width: 300px;left: 50%;top:50%;margin:-150px 0 0 -150px;border-radius: 8px;}
+.mark .cont .close{width: 30px;height: 30px;position: absolute;right: 0;top:-40px;}
+.mark .cont .music{position: absolute;top:10px;left:10px;width: 40px;height: 40px;}
+.mark .cont .img{width: 300px;height: 200px;border-radius: 5px;}
+.mark .cont .text{margin-top: 10px;background: #fff;border-radius: 5px;padding: 10px;}
+
+/*语音*/
+.yuyin-wrap{display: flex;align-items: center;margin:10px 0 2px;}
+.yuyin{width:50px;max-width: 50%;height: 25px;background: #31b0ff;margin:0 10px 0 15px;border:1px solid #ccc;border-radius: 4px;position: relative;}
+.yuyin:before{content:'';position: absolute;width: 0;height:0;border:5px solid transparent;border-right-color:#ccc;left:-11px;top:7px;}
+.yuyin:after{content:'';position: absolute;width: 0;height:0;border:5px solid transparent;border-right-color:#31b0ff;left:-9px;top:7px;}
+
+.yuyin .r1{position: absolute;left:5px;top:10px;width: 5px;height: 5px;border-radius: 100%;box-sizing: border-box;border:2px solid #fff;clip: rect(1px 5px 4px 3px);}
+.yuyin .r2{position: absolute;left:7px;top:7px;width: 8px;height: 11px;border-radius: 100%;box-sizing: border-box;border:2px solid #fff;clip:rect(1px 8px 10px 5px);}
+.yuyin .r3{position: absolute;left:9px;top:5px;width: 11px;height: 15px;border-radius: 100%;box-sizing: border-box;border:2px solid #fff;clip:rect(0px 11px 15px 7px);}
+
+.yuyin .r22{animation:sh2 1.2s infinite;}
+.yuyin .r33{animation:sh3 1.2s infinite;}
+@keyframes sh2{
+    0%{opacity:0;}
+    33%{opacity:1;}
+    66%{opacity:1;}
+    100%{opacity:0;}
+}
+@keyframes sh3{
+    0%{opacity:0;}
+    33%{opacity:0;}
+    66%{opacity:1;}
+    100%{opacity:0;}
+}

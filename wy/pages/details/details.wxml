@@ -1,0 +1,63 @@
+<!--pages/details/details.wxml-->
+
+
+<view class="item">
+    <scroll-view class="main" scroll-y="true">
+        <view class="theme">
+            <image src="/img/bg2.png"></image>
+            <text class="name">楚兰</text>
+            约球
+            <text style="float:right;font-size:12px;">回首页</text>
+        </view>
+        <view class="bg">
+            <image src="/img/bg4.png"></image>
+            <view class="label-wrap">
+                <view wx:for="{{labelArray}}" class="label"  style="background-image:url({{url}}/img/label_bg.png)">{{item}}</view>
+            </view>
+        </view>
+        <view class="yuyin-wrap" wx:if="{{content_yy}}">
+            <view>内容语音</view>
+            <view class="yuyin" bindtap="playR" style="width:{{30+content_time*10+'px'}}">
+                <view class="r1"></view>
+                <view class="r2 {{yy1?'r22':''}}"></view>
+                <view class="r3 {{yy1?'r33':''}}"></view>
+            </view>
+            <view>{{content_time}}s</view>
+        </view>
+        <view class="cont {{show?'ellipsis':''}}" bindtap="contTap">周六下午一起打球吧周六下午一起打球吧周六下午一起打球吧周六下午一起打球吧周六下午一起打球吧</view>
+        <view class="row"> 
+            <image class="icon" src="/img/det_icon1.png"></image>
+            <view>04/05 周三 20:00</view>
+        </view>
+        <view class="row">
+            <image class="icon" src="/img/det_icon2.png"></image>
+            <view>30分钟前</view>
+        </view>
+        <view class="row" bindtap="joinList">
+            <image class="icon" src="/img/det_icon3.png"></image>
+            <view>3人参与</view>
+            <image class="tx" src="/img/tx.jpg"></image>
+            <image class="tx" src="/img/tx.jpg"></image>
+            <image class="tx" src="/img/tx.jpg"></image>
+            <image class="jt" src="/img/right.png"></image>
+        </view>
+    </scroll-view>
+    <view wx:if="{{people_type}}" class="foot">
+        <button plain class="join {{join?'disabled':''}}"><image src="/img/join.png"></image> 参加</button>
+        <button plain class="out {{out?'disabled':''}}"><image src="/img/out.png"></image> 退出</button>
+    </view>
+    <view wx:if="{{!people_type}}" class="foot">
+        <button plain  class="join"><image src="/img/edit.png"></image> 编辑</button>
+        <button plain  class="out"><image src="/img/out.png"></image> 删除</button>
+    </view>
+</view>
+
+<!--通知层-->
+<view class="mark" wx:if="{{mark}}">
+    <view class="cont">
+        <image class="close" bindtap="closeMark" src="/img/close.png"></image>
+        <image class="music" src="/img/music.png"></image>
+        <image class="img" src="/img/bg1.png"></image>
+        <view class="text">通知的文字文字文字文字</view>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+/* btn.wxss */
+/* view、text封装的一个简易按钮样式 start */
+.btn{
+    margin: 0 10rpx 100rpx;
+    padding: 20rpx;
+    border-radius: 10px;
+}
+
+.btncolor1{
+    background-color: lightseagreen;
+}
+
+
+.btncolor2{
+    background-color: paleturquoise;
+}
+
+.btntext{
+    font-family: Courier;
+    font-size: 16px;
+}
+/* view、text封装的一个简易按钮样式 end */

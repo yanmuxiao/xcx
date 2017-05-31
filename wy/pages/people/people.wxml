@@ -1,0 +1,23 @@
+<!--pages/people/people.wxml-->
+<view class="item">
+    <scroll-view class="main" scroll-y="true">
+        <view class="row">
+            <image class="type" src="/img/type1.png"></image>
+            <image class="tx" src="/img/bg2.png"></image>
+            <view class="name">楚兰<text>2天前</text></view>
+            <view>不约</view>
+        </view>
+        <view class="row">
+            <image class="type" src="/img/type2.png"></image>
+            <image class="tx" src="/img/bg2.png"></image>
+            <view class="name">楚兰<text>2天前</text></view>
+            <view>参与</view>
+        </view>
+        <view class="row">
+            <image class="type" src="/img/type3.png"></image>
+            <image class="tx" src="/img/bg2.png"></image>
+            <view class="name">楚兰<text>2天前</text></view>
+            <view>参与</view>
+        </view>
+    </scroll-view>
+</view>

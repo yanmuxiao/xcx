@@ -1,0 +1,40 @@
+/* pages/all/all.wxss */
+
+.month{display: flex;padding: 15px 20px 10px;}
+.month image{width: 15px;height: 15px;}
+.month view{flex: 1;text-align: center;color: #666;}
+.month view text.cur{background: -webkit-linear-gradient(#3bcdff, #007eca);color: #fff;padding: 2px 10px;border-radius: 5px;}
+
+.week{display: flex;padding: 15px;}
+.week .item{flex:1;text-align: center;font-size: 12px;color: #e1e2e7;}
+.day{display: flex;flex-wrap:wrap;padding: 0 10px;}
+.day .item{width: 8.28%;padding: 4px 0; margin:3%;text-align: center;color: #333;border-radius: 100%;position: relative;}
+.day .item.disabled{color: #e1e2e7;}
+.day .item.cur{background: -webkit-linear-gradient(#3bcdff, #007eca);color: #fff;}
+.day .item.today:after{content:"今";position: absolute;top:88%;left:0;right:0;text-align:center;font-size: 12px;color: #007eca;}
+.day .item.trip:after{content:"";position: absolute;top:95%;left:40%;width: 6px;height: 6px;border-radius: 100%;background: -webkit-linear-gradient(#3bcdff, #007eca);}
+
+.wrap{margin: 15px 15px 30px;border-bottom: 1px solid #ddd;}
+.wrap .row{display: flex;align-items: center;}
+.wrap .row:first-child{border-top: 0;}
+.wrap .row .flex{flex: 1;}
+.wrap .icon{width:25px;height: 25px;margin:8px 10px;vertical-align: middle;}
+.wrap .icon-search{width:25px;height: 25px;margin:8px 0 8px 15px;vertical-align: middle;}
+.wrap .icon-right{width: 12px;height: 12px;margin-left: 5px;}
+.label-wrap{position: relative;text-align: right;height: 40px;overflow: hidden;}
+.edit-label{position: absolute;left: 0;top:0;right:0;bottom:0;display: flex;align-items: center;background: #fff;padding: 0 10px 0 50px;}
+.edit-label input{flex:1;border:1px solid #ddd;padding: 0 10px;border-radius: 5px;}
+.label-mark{margin:0 30px 0 70px; background: #fff;border-top: 1px dashed #ddd;text-align: right;padding-top: 10px}
+.label-item{padding: 2px 10px;margin:0 0 10px 10px;background:#31b0ff;display: inline-block;border-radius: 5px;color: #fff;position: relative;line-height: 20px;}
+.label-mark .label-item{background: #ddd;}
+
+.u-tt{text-align: center;}
+
+.activity{margin:15px;padding: 10px;border-radius: 5px;background: url() no-repeat;background-size: 100% 100%;display: flex;align-items: center;}
+.activity .theme{font-size: 16px;color: #000;flex:1;}
+.activity .time{font-size: 12px;color: #666;margin-bottom: 8px;}
+.activity image{width: 22px;height: 22px;border-radius: 100%;vertical-align: middle;margin-left: 5px;}
+
+
+.lable{color: #666;margin:0 5px;padding:0 5px;border-radius: 5px;height: 22px;line-height: 22px;}
+.lable.cur{background: #e16531;color: #fff;}

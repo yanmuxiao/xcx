@@ -1,0 +1,6 @@
+/* pages/template/template.wxss */
+
+.u-tt{padding: 15px;}
+
+.img-wrap{padding-left: 5%;overflow: hidden;}
+.img-wrap image{width: 45%;height: 150px;margin:0 5% 5% 0;float:left;}

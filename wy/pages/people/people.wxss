@@ -1,0 +1,13 @@
+/* pages/people/people.wxss */
+
+page{background: url(http://s-113712.gotocdn.com:99/img/page_bg.png) no-repeat #e5f4fb;background-size: 100% auto;}
+
+
+.item{height: 100%;padding:40rpx 40rpx 0;box-sizing: border-box;}
+.item .main{height: 100%;background:#fff;border-radius: 20px 20px 0 0;padding: 15px;box-sizing: border-box;padding-bottom: 55px;}
+
+.row{display: flex;align-items: center;padding: 10px;border-bottom: 1px solid #ddd;color: #666;}
+.row .type{width: 20px;height: 20px;}
+.row .tx{width: 30px;height: 30px;border-radius: 100%;margin:0 10px;}
+.row .name{flex:1;color: #000;}
+.row .name text{margin-left: 10px;font-size: 12px;color: #999;}

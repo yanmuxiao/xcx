@@ -1,0 +1,11 @@
+/**app.wxss**/
+
+page{height: 100%;font-size: 14px;font-family: "Microsoft YaHei";}
+
+/*公用按钮*/
+.but{width: 90%;margin: 25px auto;background:  -webkit-linear-gradient(#3bcdff, #007eca);color: #fff;line-height: 40px;}
+
+.text-right{text-align: right;}
+
+
+.no-data{text-align: center;margin:10px;}

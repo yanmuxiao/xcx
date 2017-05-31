@@ -1,0 +1,38 @@
+<view class="container">
+    <!--轮播banner-->
+    <view class="section section_gap swiper">
+        <swiper style="height: 6.2577rem;" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{coursel}}">
+            <swiper-item>
+              <image class="coursel-img" src="../../image/coursel/{{item}}"></image>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+
+    <view class="c-content">
+        <block wx:for="{{taskList}}" wx:for-item="taskItem" wx:for-index="taskIndex">
+            <view class="content-list">
+                <view class="content-h">
+                    <view class="content-hl ellipsis">任务名称：{{taskItem.taskName}}</view>
+                    <view class="content-hl ellipsis">任务时间：{{taskItem.taskTime}}</view>
+                </view>
+                <view class="content-c">
+                    <block wx:for="{{contentClist}}" wx:for-item="cListItem" wx:for-index="cListIndex">
+                        <view class="cc-list cc-list_{{cListIndex}}">
+                            <text class="ellipsis">{{cListItem + '：' + taskItem.taskContent[cListIndex]}}</text>
+                        </view>
+                    </block>
+                </view>
+                <view class="content-f">
+                    <block wx:for="{{taskItem.taskFoot}}" wx:for-item="tsakFItem" wx:for-index="tsakFIndex">
+                        <view>{{tsakFItem}}</view>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+
+
+</view>

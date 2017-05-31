@@ -1,0 +1,92 @@
+<!--pages/add/add.wxml-->
+
+<view class="wrap">
+    <view class="row">
+        <view class="flex"><input placeholder="点此输入主题" /></view>
+    </view>
+    <view class="row">
+        <view class="flex"><input placeholder="点此输入内容" /></view>
+    </view>
+    <view class="row">
+        <view>内容语音</view>
+        <view wx:if="{{an1}}" class="yuyin an"></view>
+        <view wx:if="{{rr1}}" class="yuyin" data-ty="content" bindtap="playR" animation="{{animationData1}}">
+            <view class="r1"></view>
+            <view class="r2 {{yy1?'r22':''}}"></view>
+            <view class="r3 {{yy1?'r33':''}}"></view>
+        </view>
+        <view wx:if="{{rr1}}">{{content_rt}}s</view>
+        <view class="flex"></view>
+        <image class="icon" data-ty="content" bindtouchstart="startR" bindtouchend="endR" src="/img/yy.png"></image>
+    </view>
+</view>
+<view class="wrap">
+    <view class="row" bindtap="goTime">
+        <view>活动时间</view>
+        <view class="tips">04-07 <text class="line">|</text> 10:00</view>
+        <image class="icon" src="/img/weather1.png"></image>
+    </view>
+    <view class="row gap" bindtap="goRemind">
+        <view>提醒时间</view>
+        <view class="tips">{{remind}}</view>
+        <image class="icon-right" src="/img/right.png"></image>
+    </view>
+</view>
+<view class="wrap">
+    <view class="row">
+        <view>活动标签</view>
+        <view class="flex label-wrap">
+            <image class="icon" bindtap="addLabel" src="/img/label_add.png"></image>
+            <text bindtap="selTap" data-value="{{item}}" class="label-item" wx:for="{{label_sure}}">{{item}}</text>
+            <view class="add-label" wx:if="{{add}}">
+                <input placeholder="新增标签" bindinput="inputChange" value="{{label_value}}" auto-focus/>
+                <image class="icon" bindtap="ok" src="/img/label_ok.png"></image>
+            </view>
+        </view>
+        <image class="icon-right" src="{{icon}}" bindtap="labelToggle"></image>
+    </view>
+    <view wx:if="{{toggle}}" class="label-mark">
+        <view wx:if="{{label_state}}" wx:for="{{label_sel}}" data-num="{{index}}" data-value="{{item}}" class="label-item {{label_num==index?'del':''}}" bindtouchstart="labelTs" bindtouchend="labelTe"  bindtap="labelTap">{{item}}<text class="{{label_num==index?'del-after':''}}" style="background-image:url({{url}}/img/close.png)"></text></view>
+        <view wx:if="{{!label_state}}" style="padding-bottom:10px;">没有标签，请先新增标签</view>
+    </view>
+    <view class="row" bindtap="goTemplate">
+        <view class="flex">活动模板</view>
+        <image class="icon-img" src="{{template_img}}"></image>
+        <image class="icon-right" src="/img/right.png"></image>
+    </view>
+    <view class="row">
+        <view>活动人数</view>
+        <view class="flex">
+            <input type="number" class="text-right" placeholder="编辑人数，为空默认不限" bindinput="editNum" value="{{num_val}}" />
+        </view>
+        <view class="unlimit {{num?'disabled':''}}" bindtap="unlimitNum">不限人数</view>
+    </view>
+</view>
+<view class="wrap">
+    <view class="row">
+        <view>通知语音</view>
+        <view wx:if="{{an2}}" class="yuyin an"></view>
+        <view wx:if="{{rr2}}" class="yuyin" data-ty="notice" bindtap="playR" animation="{{animationData2}}">     
+            <view class="r1"></view>
+            <view class="r2 {{yy2?'r22':''}}"></view>
+            <view class="r3 {{yy2?'r33':''}}"></view>
+        </view>
+        <view wx:if="{{rr2}}">{{notice_rt}}s</view>
+        <view class="flex"></view>
+        <image class="icon" data-ty="notice" bindtouchstart="startR" bindtouchend="endR" src="/img/yy.png"></image>
+    </view>
+    <view class="row">
+        <view>通知文字</view>
+        <view class="flex">
+        <input class="text-right" placeholder="点此输入内容" />
+        </view>
+    </view>
+    <view class="row" bindtap="goImg">
+        <view class="flex">通知图片</view>
+        <image class="icon-img" src="{{notice_img}}"></image>
+        <image class="icon-right" src="/img/right.png"></image>
+    </view>
+</view>
+<button class="but" bindtap="goDetails">保存</button>
+
+<!--<text wx:if="{{ly}}" class="ly">开始录音...</text>-->

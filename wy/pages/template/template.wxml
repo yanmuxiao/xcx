@@ -1,0 +1,8 @@
+<!--pages/template/template.wxml-->
+
+<block wx:for="{{imgTyep}}">
+    <view class="u-tt">{{item.name}}</view>
+    <view class="img-wrap">
+        <image wx:for="{{item.img}}" bindtap="setImg" data-src="{{item}}" src="{{item}}"></image>
+    </view>
+</block>

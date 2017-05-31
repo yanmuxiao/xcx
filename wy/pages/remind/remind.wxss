@@ -1,0 +1,6 @@
+/* pages/remind/remind.wxss */
+
+.checkbox{padding: 10px 20px;border-bottom:1px solid #ddd;}
+.checkbox checkbox{margin-right: 10px;}
+
+.radio{padding: 10px 20px;border-bottom:1px solid #ddd;display: block;}

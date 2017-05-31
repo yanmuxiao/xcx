@@ -1,0 +1,48 @@
+
+<swiper duration="500" indicator-dots="true" indicator-color="#44d1ff" indicator-active-color="#098ad2">
+    <swiper-item class="item">
+      <view class="g-title"><text>计划</text></view>
+
+
+      <scroll-view class="main" style="background-image:url({{url}}/img/swiper_bg.png)" scroll-y="true">
+        <view wx:if="{{activity.length>0}}" class="activity" style="background-image:url({{url}}/img/bg4.png)" wx:for="{{activity}}" bindtap="goDetails" data-index="{{index}}">
+          <view class="faqi">
+            <image src="/img/tx.jpg"></image><text>发起</text>
+          </view>
+          <view class="theme">{{item}}</view>
+          <view class="time">04月05日 11:20 周三</view>
+          <view>3人参与：
+            <image src="/img/tx.jpg"></image>
+            <image src="/img/tx.jpg"></image>
+            <image src="/img/tx.jpg"></image>
+          </view>
+        </view>
+        <view wx:if="{{!(activity.length>0)}}" class="no-data">没有数据</view>
+
+      </scroll-view>
+
+
+
+    </swiper-item>
+    <swiper-item class="item">
+      <view class="g-title"><text>已通知</text></view>
+      <scroll-view class="main" style="background-image:url({{url}}/img/swiper_bg.png)" scroll-y="true">
+        <view class="activity" style="background-image:url({{url}}/img/bg4.png)" wx:for="{{activity}}" bindtap="goDetails">
+          <view class="faqi">
+            <image src="/img/tx.jpg"></image><text>发起</text>
+          </view>
+          <view class="theme">{{item}}</view>
+          <view class="time">04月05日 11:20 周三</view>
+          <view>3人参与：
+            <image src="/img/tx.jpg"></image>
+            <image src="/img/tx.jpg"></image>
+            <image src="/img/tx.jpg"></image>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+</swiper>
+
+<image class="g-add" src="/img/add.png" bindtap="add"></image>
+<image class="all" src="/img/all.png" bindtap="all"></image>
+

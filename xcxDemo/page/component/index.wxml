@@ -1,0 +1,32 @@
+<view class="index">
+
+    <view class="head">
+        <view class="title" id="titleID" data-title="小程序组件" bindtap="changeName">{{name}}</view>
+        <view class="desc">{{title}}</view>
+    </view>
+
+    <view class="body">
+        <view class="widgets">
+            <block wx:for="{{list}}">
+
+                <view class="widgets_item">
+                    <view id="{{item.id}}" class="widgets_info {{item.open ? 'widgets_info_show' : ''}}" bindtap="widgetsToggle">
+                        <text class="widgets_info-name">{{item.name}}</text>
+                        <image class="widgets_info-img" src="/image/arrowright.png" mode="aspectFill" />
+                    </view>
+                    <view class="widgets_list {{item.open ? 'widgets_list_show' : ''}}">
+                        <block wx:for="{{item.pages}}" wx:for-item="page">
+                            <navigator url="component-pages/{{page}}/{{page}}" class="widget">
+                                <text class="widget_name">{{page}}</text>
+                                <image class="widget_arrow"  src="/image/arrowright.png" mode="aspectFill" />
+                                <view class="widget_line {{index == 0 ? 'widget_line_first' : ''}}"></view>
+                            </navigator>
+                        </block>
+                    </view>
+                </view>
+
+            </block>
+        </view>
+    </view>
+
+</view>

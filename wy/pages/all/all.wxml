@@ -1,0 +1,52 @@
+<!--pages/all/all.wxml-->
+
+<view class="month">
+    <image src="/img/left.png"></image>
+    <view><text class="{{num==0?'cur':''}}" bindtap="monthTap">2017年4月</text></view>
+    <image src="/img/right.png"></image>
+</view>
+
+<view class="week">
+    <block wx:for="{{week}}">
+        <view class="item">{{item}}</view>
+    </block>
+</view>
+<view class="day">
+    <block wx:for="{{month}}">
+        <view data-num="{{item.day}}" data-state="{{item.state}}" class="item {{item.state?'':'disabled'}} {{num==item.day&&item.state?'cur':''}} {{item.today?'today':''}} {{item.trip?'trip':''}}" bindtap="dayTap">{{item.day}}</view>
+    </block>
+</view>
+
+<view class="wrap">
+    <view class="row">
+        <view>活动标签</view>
+        <view class="flex label-wrap">
+            <image class="icon" bindtap="editLabel" src="/img/label_edit.png"></image>
+            <text bindtap="selTap" data-value="{{item}}" class="label-item" wx:for="{{label_sure}}">{{item}}</text>
+            <view class="edit-label" wx:if="{{edit}}">
+                <input placeholder="请输入搜索标签" bindinput="inputChange" value="{{label_value}}" auto-focus/>
+                <image class="icon" bindtap="ok" src="/img/label_ok.png"></image>
+            </view>
+        </view>
+        <image class="icon-right" src="{{icon}}" bindtap="labelToggle"></image>
+        <image class="icon-search" src="/img/label_search.png"></image>
+    </view>
+    <view wx:if="{{toggle}}" class="label-mark">
+        <view wx:if="{{label_state}}" wx:for="{{label_sel}}" data-value="{{item}}" class="label-item"  bindtap="labelTap">{{item}}</view>
+        <view wx:if="{{!label_state}}" style="padding-bottom:10px;">没有标签，请输入搜索标签</view>
+    </view>
+</view>
+
+<view class="u-tt">行程</view>
+
+<view class="activity" style="background-image:url({{url}}/img/bg4.png)" bindtap="goDetails">
+    <view class="theme">1212</view>
+    <view style="text-align:right;">
+        <view class="time">04月05日 11:20</view>
+        <view>
+            <image src="/img/tx.jpg"></image>
+            <image src="/img/tx.jpg"></image>
+            <image src="/img/tx.jpg"></image>
+        </view>
+    </view>
+</view>

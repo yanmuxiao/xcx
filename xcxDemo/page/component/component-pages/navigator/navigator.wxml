@@ -1,0 +1,23 @@
+<view class="page">
+
+  <view class="page__hd">
+    <text class="textStyle">navigator</text>
+  </view>
+
+  <view class="page__bd">
+
+        <view class="btn-area">
+
+              <navigator url="navigate?title=navigate1" hover-class="navigator-hover">
+                    <button type="default">跳转到新页面</button>
+              </navigator>
+
+              <navigator url="redirect?title=redirect1" redirect hover-class="other-navigator-hover">
+                    <button type="default">在当前页打开</button>
+              </navigator>
+              
+        </view>
+
+  </view>
+
+</view>

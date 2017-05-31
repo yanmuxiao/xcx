@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/all/all",
+    "pages/add/add",
+    "pages/time/time",
+    "pages/details/details",
+    "pages/people/people",
+    "pages/remind/remind",
+    "pages/template/template",
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#31b0ff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"#fff"
+  }
+}

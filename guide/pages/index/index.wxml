@@ -1,0 +1,6 @@
+<view>
+    <view class="dateview">
+        <text>最近刷新时间是：{{date}}</text>
+    </view>
+    <image wx:for="{{imgs}}" wx:key="{{*this}}" src="{{item}}" class="img"></image>
+</view>

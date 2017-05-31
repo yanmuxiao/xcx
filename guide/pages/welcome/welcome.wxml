@@ -1,0 +1,8 @@
+<import src="btn/btn.wxml"/>
+
+<view class="container">
+    <image src="{{imgSrc}}" class="meimg"></image>
+    <text class="motto">Hello, {{name}}</text>
+    <!--<button bindtap="toMina" type="default">开启小程序之旅</button>-->
+    <template is="myBtn" data="{{btnColor}}"></template>
+</view>

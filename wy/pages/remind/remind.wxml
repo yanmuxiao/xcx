@@ -1,0 +1,16 @@
+<!--pages/remind/remind.wxml-->
+
+<!--<checkbox-group bindchange="checkboxChange">
+  <view class="checkbox" wx:for="{{items}}">
+    <checkbox data-id="ee" color="#31b0ff" value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+  </view>
+</checkbox-group>-->
+
+<radio-group bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" color="#31b0ff" checked="{{item.checked}}"/>{{item.name}}
+  </label>
+</radio-group>
+
+
+<button class="but" bindtap="sureTap">确定</button>

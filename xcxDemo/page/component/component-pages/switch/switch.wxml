@@ -1,0 +1,17 @@
+<view class="page">
+
+  <view class="page__hd">
+    <text class="textStyle">Page switch</text>
+  </view>
+
+  <view class="page__bd">
+        <view class="section section_gap">
+              <view class="body-view">
+                    <switch checked bindchange="switch1Change" />
+                    <switch bindchange="switch2Change" />
+              </view>
+        </view>
+  </view>
+
+
+</view>

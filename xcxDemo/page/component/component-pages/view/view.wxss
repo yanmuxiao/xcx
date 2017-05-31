@@ -1,0 +1,35 @@
+
+.page_hd {
+  text-align: center;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+.page__desc {
+  display: none;
+}
+
+
+
+.section_title {
+  padding: 20rpx 30rpx;
+}
+.flex-wrp {
+  display: flex;
+  background-color: #fff;
+}
+.flex-item {
+  height: 200rpx;
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bc_green {
+  background-color: green;
+}
+.bc_red {
+  background-color: red;
+}
+.bc_blue {
+  background-color: blue;
+}

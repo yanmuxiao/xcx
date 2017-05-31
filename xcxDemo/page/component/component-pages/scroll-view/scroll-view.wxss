@@ -1,0 +1,49 @@
+.page_hd {
+  text-align: center;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+.page_desc {
+  display: none;
+}
+
+
+.section {
+  margin-bottom: 90rpx;
+}
+.section_gap {
+  padding: 0 30rpx;
+}
+.section__title {
+  padding: 0 30rpx;
+  margin-bottom:20rpx;
+}
+.bc_green {
+  background-color: #09BB07;
+}
+.bc_red {
+  background-color: #F76260;
+}
+.bc_yellow {
+  background-color:#FFBE00;
+}
+.bc_blue {
+  background-color: #10AEFF;
+}
+
+
+.scroll-view-item {
+  height: 100px;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+.scroll-view-item_H {
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}
+
+
+
